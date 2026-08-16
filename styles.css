@@ -1,0 +1,255 @@
+/* ------------------------------
+   Peacewright Project
+   The Craft of Making Peace
+   ------------------------------ */
+
+:root {
+    --ink: #17232b;
+    --cream: #f5f0e6;
+    --paper: #fffdf8;
+    --wood: #765536;
+    --wood-dark: #463321;
+    --brass: #b99a62;
+    --muted: #667078;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 80px 24px;
+
+    background:
+        linear-gradient(
+            rgba(20, 27, 31, 0.90),
+            rgba(35, 32, 27, 0.92)
+        ),
+        linear-gradient(
+            135deg,
+            #25343d,
+            #4a3929
+        );
+
+    color: var(--cream);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.project-name {
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--brass);
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(3.5rem, 10vw, 7.5rem);
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.tm {
+    font-size: 0.18em;
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+.tagline {
+    margin: 24px 0 45px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-style: italic;
+    color: #ddd0b7;
+}
+
+
+/* DEFINITION */
+
+.definition {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px 30px;
+
+    border-top: 1px solid var(--brass);
+    border-bottom: 1px solid var(--brass);
+
+    font-size: 1.1rem;
+}
+
+.definition p {
+    margin: 4px 0;
+}
+
+.definition strong {
+    font-size: 1.25rem;
+}
+
+
+/* MAIN */
+
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+
+/* INTRO */
+
+.intro {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro h2,
+.open-project h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+.apprentices {
+    margin-top: 35px;
+    font-size: 1.5rem !important;
+    font-style: italic;
+    color: var(--wood);
+}
+
+
+/* THREE PILLARS */
+
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    border-top: 1px solid #ddd5c7;
+    border-bottom: 1px solid #ddd5c7;
+}
+
+.pillars article {
+    padding: 35px;
+    background: var(--cream);
+    border-top: 4px solid var(--wood);
+}
+
+.pillars h3 {
+    margin-top: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.pillars p {
+    margin-bottom: 0;
+}
+
+
+/* OPEN PROJECT */
+
+.open-project {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.open-project p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 26px;
+
+    background: var(--wood-dark);
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    text-decoration: none;
+    border-radius: 4px;
+
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.button:hover {
+    background: var(--wood);
+    transform: translateY(-2px);
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 40px;
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: var(--ink);
+    color: var(--cream);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .pillars {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .definition {
+        padding: 22px 10px;
+    }
+}
